@@ -1,0 +1,18 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "main-capability",
+  "description": "Local prompt editing, clipboard write, DeepSeek API access, and external links",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-set-always-on-top",
+    "clipboard-manager:allow-write-text",
+    {
+      "identifier": "opener:allow-open-url",
+      "allow": [
+        { "url": "https://chatgpt.com/" },
+        { "url": "https://platform.deepseek.com/api_keys" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "KEROPPILOT",
+  "version": "0.1.0",
+  "identifier": "com.chatpilot.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "KEROPPILOT",
+        "width": 460,
+        "height": 900,
+        "minWidth": 380,
+        "minHeight": 560,
+        "resizable": true,
+        "alwaysOnTop": true,
+        "visible": false,
+        "theme": "Dark",
+        "backgroundColor": "#0E0E0C"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src ipc: http://ipc.localhost https://api.deepseek.com; object-src 'none'; frame-src 'none'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "shortDescription": "微信 AI 对话提示词助手",
+    "category": "Productivity",
+    "windows": {
+      "nsis": { "languages": ["SimpChinese", "English"], "displayLanguageSelector": true }
+    },
+    "icon": ["icons/icon.ico"]
+  }
+}

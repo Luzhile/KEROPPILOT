@@ -1,0 +1,6 @@
+{
+  "name": "keroppilot-desktop",
+  "productName": "KEROPPILOT",
+  "version": "0.1.0",
+  "main": "main.cjs"
+}
